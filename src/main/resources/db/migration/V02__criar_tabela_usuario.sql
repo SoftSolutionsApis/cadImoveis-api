@@ -1,0 +1,14 @@
+CREATE TABLE usuario(
+id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+sobre_nome VARCHAR(50) NOT NULL,
+cpf VARCHAR(20) NOT NULL,
+senha VARCHAR(10) NOT NULL,
+contratado_em DATE,
+email VARCHAR(40),
+fone VARCHAR(20),
+dispositivo_id BIGINT(20),
+funcao VARCHAR(40),
+ativo BOOLEAN,
+FOREIGN KEY(dispositivo_id) REFERENCES dispositivo(id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
